@@ -1,0 +1,96 @@
+@mixin text66{
+    display: block;
+    margin-bottom: 10px;
+    color: #737373;
+}
+.detail-withdraw{
+    h2{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    .bill-title{
+        @include text66()
+    }
+    .withdraw-history{
+        border-bottom: 1px solid #ccc;
+        table{
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            th{
+                height: 30px;
+            }
+            td{
+                height: 30px;
+                border-top: 1px solid #ccc;
+            }
+        }
+    }
+}
+.detail-withdraw-form{
+    margin-top: 34px;
+    margin-left: -5px;
+    margin-right: -5px;
+    width: 100%;
+    .form-col{
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        .tag{
+            display: block;
+            width: 150px;
+            font-weight: 900;
+        }
+        a{
+            color: #1d6fa5;
+            text-decoration: none;
+        }
+        b{
+            color: #449D44;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .form-cont{
+            display: flex;
+            align-items: center;
+            p{
+                width: 280px;
+                border: 1px solid #ccc;
+                overflow: hidden;
+                margin-right: 14px;
+                height: 34px;
+                line-height: 34px;
+                border-radius: 4px;
+                input{
+                    border: none;
+                    outline: none;
+                    height: 100%;
+                    font-size: 14px;
+                }
+                button{
+                    color: white;
+                    background-color: #5cb85c;
+                    border-color: #4cae4c;
+                    font-size: 14px;
+                    height: 100%;
+                    float: right;
+                    width: 80px;
+                }
+            }
+            &>button{
+                width: 70px;
+                height: 30px;
+                border-radius: 4px;
+                color: white;
+                background-color: #364450;
+                border-color: #2c3741;
+            }
+        }
+    }
+    .pass-title{
+        margin-top: -10px;
+        @include text66()
+    }
+}
