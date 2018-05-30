@@ -1,0 +1,22 @@
+.ticketsList{
+    flex: 1;
+    padding: 30px 16px;
+    position: relative;
+    min-height: 300px;
+    .newticket{
+        width: 96px;
+        height: 34px;
+        position: absolute;
+        top: 34px;
+        right: 30px;
+        color: white;
+        background-color: #428bca;
+        border-color: #cccccc;
+        outline: none;
+    }
+    h5{
+        font-size: 14px;
+        color: #428bca;
+        font-weight: 400;
+    }
+}

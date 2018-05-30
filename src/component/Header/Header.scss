@@ -1,0 +1,123 @@
+.header{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0px 0px 4px rgba(50,50,50,0.75);
+    a{
+        text-decoration: none;
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        width: 950px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 5px;
+        padding-right: 5px;
+        ul{
+            margin-bottom: 0;
+        }
+        .nav{
+            display: flex;
+            .fa{
+                margin: 0 10px;
+                color: #3498db;
+            }
+            &>a{
+                line-height: 80px;
+                color: #ccc;
+                font-size: 20px;
+                margin-right:36px;
+            }
+            &>li{
+                text-align: center;
+                line-height: 80px;
+                &>a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    transition: all .5s linear;
+                    color:slategray;
+                }
+            }
+            &>li:hover{
+                background:rgba(0,0,0,0.05);;
+            }
+            &>li>a:hover{
+                transform: translateY(10px)
+            }
+            .dropdown-menu{
+                width: 100%;
+                transform-origin: left top;
+                transition: transform .5s linear;
+                transform: scale(1, 0);
+                visibility: hidden;
+            }
+            .account-settings li{
+                text-align: left;
+            }
+            &>.open{
+                background: #3498db;
+                a{
+                    color:#fff;  
+                }
+                i{
+                    color: #fff;
+                }
+            }
+        }
+        // #196090
+        .navbar-left{
+            width: 60%;
+            &>li{
+                flex: 1;
+            }
+        }
+        .navbar-right{
+            justify-content: flex-end;
+            width: 40%;
+            .dropdown{
+                position: relative;
+                a{
+                    display: block;
+                    padding: 0 14px;
+                    width: 100%;
+                }
+                b{
+                    display: inline-block;
+                    width: 24px;
+                }
+                li{
+                    line-height: 30px;
+                }
+                em::before{
+                    position: absolute;
+                    top: 48%;
+                    right: 16px;
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border: 5px solid transparent;
+                    border-top-color: #999;
+                }
+            }
+            &>.openselect{
+                background: #196090;
+                a{
+                    color:#fff;  
+                }
+                .fa{
+                    color: #fff;
+                }
+                .dropdown-menu{
+                    background: #196090;
+                    transform: scale(1, 1);
+                    visibility: visible;
+                    &>li:hover{
+                        background: #3498db;
+                    }
+                }
+            }
+        }
+    }
+}

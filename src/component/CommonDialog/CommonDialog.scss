@@ -1,0 +1,51 @@
+.dialog{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    .dialog-box{
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 450px;
+        height: 100px;
+        background: #f0f0f0;
+        border-radius: 5px;
+        padding: 20px;
+    }
+    .dialog-close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .dialog-btn{
+        text-align: right;
+        button{
+            border-radius: 4px;
+            height: 34px;
+            font-size: 14px;
+            margin-left: 16px;
+            line-height: 34px;
+        }
+        .sub{
+            color: white;
+            background-color: #428bca;
+            border-color: #cccccc;
+            &:hover{
+                background: blue;
+            }
+        }
+        .cancel{
+            border-color: #cccccc;
+            color: #000;
+            &:hover{
+                background: #ccc;
+            }
+        }
+    }
+}
