@@ -1,0 +1,1 @@
+export { default } from './EditPass.jsx';

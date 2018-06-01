@@ -1,0 +1,97 @@
+.smsAuth{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 240px;
+    background: rgba(0,0,0,0.05);
+}
+.smsAuth-box{
+    width: 100%;
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+// smsAuth header
+.smsAuth-header{
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 20px;
+    background: rgba(0,0,0,0.05);
+    h2{
+        width: 100%;
+        height: 38px;
+        font-size: 16px;
+    }
+}
+// smsAuth setails
+.smsAuth-details{
+    display: flex;
+    width: 100%;
+}
+.smsAuth-left{
+    width: 35%;
+    box-sizing: border-box;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+    h4{
+        font-size: 24px;
+        margin-bottom: 10px;
+        .fa{
+            margin-right: 6px;
+        }
+    }
+    p{
+        margin-top: 14px;
+        color: #8a6d3b;
+    }
+}
+.smsAuth-right{
+    width: 65%;
+    padding: 30px 40px;
+    .smsAuth-form{
+        .getberify{
+            display: flex;
+            button{
+                color: white;
+                background-color: #364450;
+                border-color: #2c3741;
+            }
+        }
+        .smsAuth-btn{
+            border-top: 1px solid #ccc;
+            margin: 30px 0 50px 150px;
+            padding-top: 20px;
+            span{
+                display: block;
+                padding: 0px 4px;
+                width: 100%;
+                height: 100%;
+            }
+            button{
+                height: 40px;
+                line-height: 40px;
+            }
+            .smsAuth-btn-cancel{
+                font-size: 18px;
+                border-radius: 6px;
+                margin-right: 20px;
+                color: #333333;
+                background-color: white;
+                border-color: #f2f2f2;
+                &:hover{
+                    background-color: #eee;
+                }
+            }
+            .smsAuth-btn-sure{
+                font-size: 18px;
+                border-radius: 6px;
+                color: white;
+                background-color: #428bca;
+                border-color: #cccccc;
+            }
+        }
+    }
+}

@@ -11,6 +11,10 @@ import Markets from './view/Markets'
 import Settings from './view/Settings'
 import Tickets from './view/Tickets'
 import Signin from './view/Signin'
+import Verify from './view/Verify'
+import SmsAuth from './view/SmsAuth'
+import GoogleAuth from './view/GoogleAuth'
+import EditPass from './view/EditPass'
 
 class App extends Component {
   render() {
@@ -24,6 +28,11 @@ class App extends Component {
         <Route path="/history" component={Historys}/>
         <Route path="/settings" component={Settings}/>
         <Route path="/tickets" component={Tickets}/>
+        {/* 设置页面 */}
+        <Route path="/verify" component={Verify}/>
+        <Route path="/smsauth" component={SmsAuth}/>
+        <Route path="/googleauth" component={GoogleAuth}/>
+        <Route path="/editpass" component={EditPass}/>
         
         <Route path="/signin" component={Signin}/>
         <Footer/>
