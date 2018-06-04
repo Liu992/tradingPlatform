@@ -15,6 +15,8 @@ import Verify from './view/Verify'
 import SmsAuth from './view/SmsAuth'
 import GoogleAuth from './view/GoogleAuth'
 import EditPass from './view/EditPass'
+import ResetPassword from './view/ResetPassword'
+import Signup from './view/Signup'
 
 class App extends Component {
   render() {
@@ -33,8 +35,12 @@ class App extends Component {
         <Route path="/smsauth" component={SmsAuth}/>
         <Route path="/googleauth" component={GoogleAuth}/>
         <Route path="/editpass" component={EditPass}/>
-        
+        {/* 登陆 */}
         <Route path="/signin" component={Signin}/>
+        
+        <Route path="/resetpassword" component={ResetPassword}/>
+        <Route path="/signup" component={Signup}/>
+        
         <Footer/>
       </div>
     );

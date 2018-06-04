@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './SmsAuth.scss';
 import { Form, Input, Select, Button } from 'antd';
 
-const { TextArea } = Input;
 const FormItem = Form.Item;
 const Option = Select.Option;
 

@@ -20,7 +20,7 @@
         .nav{
             display: flex;
             .fa{
-                margin: 0 10px;
+                margin-right:10px;
                 color: #3498db;
             }
             &>a{
@@ -70,12 +70,15 @@
         .navbar-left{
             width: 60%;
             &>li{
-                flex: 1;
+                padding: 0 10px;
             }
         }
         .navbar-right{
             justify-content: flex-end;
             width: 40%;
+            .login{
+                padding: 0 10px;
+            }
             .dropdown{
                 position: relative;
                 a{

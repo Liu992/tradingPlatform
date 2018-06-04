@@ -1,0 +1,115 @@
+.signin{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 240px;
+    background: rgba(0,0,0,0.05);
+    a{
+        color: #1d6fa5;
+    }
+}
+.signin-box{
+    width: 100%;
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+// signin header
+.signin-header{
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 20px;
+    background: rgba(0,0,0,0.05);
+    h2{
+        width: 100%;
+        height: 38px;
+        font-size: 16px;
+    }
+}
+// signin setails
+.signin-details{
+    display: flex;
+    width: 100%;
+}
+.signin-left{
+    width: 40%;
+    box-sizing: border-box;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+    h4{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+}
+.signin-right{
+    width: 60%;
+    padding: 20px 80px 30px 20px;
+    &>.signin-right-item:nth-child(2){
+        margin-top: 20px;
+    }
+}
+.signin-right-item{
+    p{
+        font-size: 13px;
+        margin-top: -14px;
+        margin-bottom: 20px;
+        text-align: right;
+    }
+    .item-cont{
+        .item-cont-col{
+            display: flex;
+            margin-bottom: 20px;
+            b{
+                text-align: right;
+                display: inline-block;
+                width: 36%;
+                line-height: 30px;
+            }
+            .col-input{
+                display: flex;
+                margin-left: 10px;
+                flex: 1;
+                input{
+                    flex: 1;
+                }
+            }
+        }
+    }
+    .signin-btn{
+        border-top: 1px solid #ccc;
+        margin: 30px 0 50px 0;
+        padding-top: 20px;
+        text-align: right;
+        span{
+            display: block;
+            padding: 0px 4px;
+            width: 100%;
+            height: 100%;
+        }
+        button{
+            height: 40px;
+            line-height: 40px;
+        }
+        .signin-btn-cancel{
+            font-size: 18px;
+            border-radius: 6px;
+            margin-right: 20px;
+            color: #333333;
+            background-color: white;
+            border-color: #f2f2f2;
+            &:hover{
+                background-color: #eee;
+            }
+        }
+        .signin-btn-sure{
+            font-size: 18px;
+            border-radius: 6px;
+            color: white;
+            background-color: #428bca;
+            border-color: #cccccc;
+        }
+    }
+}

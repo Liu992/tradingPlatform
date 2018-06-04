@@ -13,7 +13,8 @@ let navlist = [
     id: 2,
     path: '/funds',
     iconfont: 'fa fa-money',
-    text: '我的资产'
+    text: '我的资产',
+    authority: true
   },
   {
     id: 3,
@@ -25,9 +26,22 @@ let navlist = [
     id: 4,
     path: '/history',
     iconfont: 'fa fa-book',
-    text: '历史记录'
+    text: '历史记录',
+    authority: true
   }
 ];
+let loginAccount = [
+  {
+    id: 5,
+    path: '/signin',
+    title: '登录'
+  },
+  {
+    id: 6,
+    path: '/signup',
+    title: '创建账户'
+  }
+]
 let a = 0;
 let b = 0;
 class Header extends Component {
@@ -36,7 +50,8 @@ class Header extends Component {
     this.state = {
       ind: 0,
       ind1: 0,
-      on: false
+      on: false,
+      unlogin: false
     }
   }
   addOpen (id) {
@@ -80,7 +95,7 @@ class Header extends Component {
     }
   }
   render() {
-    let { ind, ind1, on } = this.state;
+    let { ind, ind1, on, unlogin } = this.state;
     return (
       <div className="header">
         <div className="container">
@@ -92,7 +107,7 @@ class Header extends Component {
               {
                 navlist.map((item, index) => {
                   return (
-                    <li key={item.id} className={ind === item.id?'open':''} style={{background: ind===item.id?'#3498db':''}} onClick={this.addOpen.bind(this, item.id)}>
+                    <li key={item.id} className={ind === item.id?'open':''} style={{background: ind===item.id?'#3498db':'', display: item.authority&&unlogin?'none':'block'}} onClick={this.addOpen.bind(this, item.id)}>
                       <NavLink to={item.path}>
                         <i className={item.iconfont}></i>
                         <span>{item.text}</span>
@@ -103,7 +118,16 @@ class Header extends Component {
               }
           </ul>
         <ul className="nav navbar-right">
-          <li className={`dropdown account-settings ${on&&ind1 == 1?'openselect':''}`} onClick={this.openSelect.bind(this, 1)}  style={{background: on&&ind1===1?'#196090':''}}>
+          {
+            loginAccount.map((item, index) => {
+              return (
+                <li key={item.id} className={`login ${ind === item.id?'open':''}`} style={{background: ind===item.id?'#3498db':'', display: !unlogin?'none':'block'}} onClick={this.addOpen.bind(this, item.id)}>
+                  <NavLink to={item.path} ><span>{item.title}</span></NavLink>
+                </li>
+              )
+            })
+          }
+          <li className={`dropdown account-settings ${on&&ind1 == 1?'openselect':''}`} onClick={this.openSelect.bind(this, 1)}  style={{background: on&&ind1===1?'#196090':'', display: unlogin?'none':'block'}}>
             <a className="dropdown-toggle" href="javascript:;">1234567890@163.com<b  className="dropdown-toggle"></b><em className="dropdown-toggle"></em></a>
             <ul className="dropdown-menu">
               <li>

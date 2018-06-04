@@ -118,7 +118,7 @@ class Verify extends Component {
   }
   render() {
     const { getFieldDecorator } = this.props.form;
-    let { name, year, month, day, address, city, nation, postcode, paperstype, papersphone, papersphoto, billtype, billphoto } = this.state;
+    
     const formItemLayout = {
       labelCol: {
         xs: { span: 24 },
@@ -182,13 +182,27 @@ class Verify extends Component {
                     )}
                   >
                     <Select defaultValue="31" style={{ width: 120 }} onChange={this.changeDay}>
-                      <Option value="jack">Jack</Option>
+                      {
+                        days.map((item, index) => {
+                          return (
+                            <Option key={index} value={item}>{item}</Option>
+                          )
+                        })
+                      }
                     </Select>
                     <Select defaultValue="五月" style={{ width: 120 }} onChange={this.changeMonth}>
-                      <Option value="jack">Jack</Option>
+                      {
+                        months.map((item, index) => {
+                          return <Option value={item} key={index}>{item}</Option>
+                        })
+                      }
                     </Select>
                     <Select defaultValue="1948" style={{ width: 120 }} onChange={this.changeYear}>
-                      <Option value="jack">Jack</Option>
+                      {
+                        years.map((item, index) => {
+                          return <Option value={item} key={index}>{item}</Option>
+                        })
+                      }
                     </Select>
                   </FormItem>
                   {/* 地址 */}

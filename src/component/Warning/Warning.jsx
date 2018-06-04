@@ -16,7 +16,7 @@ class Warning extends Component {
     this.props.close(false)
   }
   render() {
-    let { visible, title, mold, hei } = this.state;
+    let { visible, title, mold } = this.state;
     return (
         <Alert 
         type={mold} 

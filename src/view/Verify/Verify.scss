@@ -56,6 +56,9 @@
     }
     .verify-form{
         padding-right: 40px;
+        .ant-form-item{
+            margin-bottom: 4px;
+        }
         .label{
             display: block;
             text-align: right;

@@ -6,6 +6,10 @@ class GoogleAuth extends Component {
   constructor (props) {
     super(props)
   }
+  toBack () {
+    let { history } = this.props;
+    history.go(-1)
+  }
   render() {
     return (
       <div className="googleauth">
@@ -49,7 +53,7 @@ class GoogleAuth extends Component {
                   </div>
                   <div className="item-cont-col">
                     <b><abbr title="必须的">*</abbr>密文</b>
-                    <div className="ciphertext">
+                    <div className="ciphertext col-input">
                       <Input disabled placeholder="jsdljskaljfjslkajf"/><Button><i className="fa fa-refresh"></i></Button>
                     </div>
                   </div>
@@ -62,9 +66,15 @@ class GoogleAuth extends Component {
                   <div className="item-cont">
                     <div className="item-cont-col">
                       <b>验证器上的密码</b>
-                      <Input/>
+                      <div className="col-input">
+                        <Input/>
+                      </div>
                     </div>
                   </div>
+                </div>
+                <div className="googleauth-btn">
+                  <Button type="primary" className="googleauth-btn-cancel" onClick={this.toBack.bind(this)}>取消</Button>
+                  <Button type="primary" className="googleauth-btn-sure">确认</Button>
                 </div>
               </div>
             </div>
