@@ -7,7 +7,7 @@ class TicketsList extends Component {
     this.toNewTickets = this.toNewTickets.bind(this)
   }
   toNewTickets () {
-    this.props.history.push('/tickets/new')
+    this.props.history.push('/index/tickets/new')
   }
   render() {
     return (

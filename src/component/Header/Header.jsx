@@ -6,25 +6,26 @@ let navlist = [
   {
     id: 1,
     path: '/markets',
+    target: '_blank',
     iconfont: 'fa fa-exchange',
     text: '交易大厅'
   },
   {
     id: 2,
-    path: '/funds',
+    path: '/index/funds',
     iconfont: 'fa fa-money',
     text: '我的资产',
     authority: true
   },
   {
     id: 3,
-    path: '/exchange_assets',
+    path: '/index/exchange_assets',
     iconfont: 'fa fa-bar-chart-o',
     text: '资产公开'
   },
   {
     id: 4,
-    path: '/history',
+    path: '/index/history',
     iconfont: 'fa fa-book',
     text: '历史记录',
     authority: true
@@ -33,12 +34,12 @@ let navlist = [
 let loginAccount = [
   {
     id: 5,
-    path: '/signin',
+    path: '/index/signin',
     title: '登录'
   },
   {
     id: 6,
-    path: '/signup',
+    path: '/index/signup',
     title: '创建账户'
   }
 ]
@@ -100,7 +101,7 @@ class Header extends Component {
       <div className="header">
         <div className="container">
           <ul className="nav navbar-left">
-              <NavLink to="/" tag="b">
+              <NavLink to="/index/dcl" tag="b">
                 <i></i>
                 <span>DCL</span>
               </NavLink>
@@ -108,7 +109,7 @@ class Header extends Component {
                 navlist.map((item, index) => {
                   return (
                     <li key={item.id} className={ind === item.id?'open':''} style={{background: ind===item.id?'#3498db':'', display: item.authority&&unlogin?'none':'block'}} onClick={this.addOpen.bind(this, item.id)}>
-                      <NavLink to={item.path}>
+                      <NavLink to={item.path} target={item.target}>
                         <i className={item.iconfont}></i>
                         <span>{item.text}</span>
                       </NavLink>
@@ -131,19 +132,19 @@ class Header extends Component {
             <a className="dropdown-toggle" href="javascript:;">1234567890@163.com<b  className="dropdown-toggle"></b><em className="dropdown-toggle"></em></a>
             <ul className="dropdown-menu">
               <li>
-                <NavLink to="/settings">
+                <NavLink to="/index/settings">
                   <i className="fa fa-user"></i>
                   <span>用户设置</span>
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/tickets/list">
+                <NavLink to="/index/tickets/list">
                   <i className="fa fa-comments"></i>
                   <span>服务单</span>
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/signin">
+                <NavLink to="/index/signin">
                   <i className="fa fa-sign-out"></i>
                   <span>安全退出</span>
                 </NavLink>

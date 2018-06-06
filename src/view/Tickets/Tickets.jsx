@@ -23,8 +23,8 @@ class Tickets extends Component {
             <div className="tickets-left">
               <h4>服务单</h4>
             </div>
-            <Route path="/tickets/list" component={TicketsList}/>
-            <Route path="/tickets/new" component={NewTickets}/>
+            <Route path="/index/tickets/list" component={TicketsList}/>
+            <Route path="/index/tickets/new" component={NewTickets}/>
           </div>
         </div>
         

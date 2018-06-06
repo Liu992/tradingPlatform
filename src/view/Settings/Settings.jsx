@@ -60,7 +60,7 @@ class Settings extends Component {
                   <p>为配合国家相关法令条例，请您正确输入信息，进行身份认证，身份认证未完成将不能在网站进行任何操作。</p>
                 </div>
                 <div className="settings-item-right">
-                  <button className="btn-default" onClick={this.toEdit.bind(this, '/verify')}>设置</button>
+                  <button className="btn-default" onClick={this.toEdit.bind(this, '/index/verify')}>设置</button>
                 </div>
               </div>
               <div className="settings-item">
@@ -72,7 +72,11 @@ class Settings extends Component {
                   <p>绑定手机号码，让您的资金更安全，您可以即时收到在网站操作的动态提醒并及时监控账号安全。</p>
                 </div>
                 <div className="settings-item-right">
-                  <button className="btn-default" onClick={this.toEdit.bind(this, '/smsauth')}>设置</button>
+                  <button className="btn-default" onClick={this.toEdit.bind(this, '/index/smsauth')}>设置</button>
+                  {/* <button className="btn-default btn-success disabled">
+                    <i className="fa fa-check-circle"></i>
+                    <span>已绑定</span>
+                  </button> */}
                 </div>
               </div>
               <div className="settings-item">
@@ -84,7 +88,7 @@ class Settings extends Component {
                   <p>两步验证为您的帐户额外添加了一层保护。</p>
                 </div>
                 <div className="settings-item-right">
-                  <button className="btn-default" onClick={this.toEdit.bind(this, '/googleauth')}>设置</button>
+                  <button className="btn-default" onClick={this.toEdit.bind(this, '/index/googleauth')}>设置</button>
                 </div>
               </div>
               <div className="settings-item">
@@ -96,7 +100,7 @@ class Settings extends Component {
                   <p>此密码仅限作网站登录使用，请您牢记。</p>
                 </div>
                 <div className="settings-item-right">
-                  <button className="btn-default" onClick={this.toEdit.bind(this, '/editpass')}>修改</button>
+                  <button className="btn-default" onClick={this.toEdit.bind(this, '/index/editpass')}>修改</button>
                 </div>
               </div>
               <div className="settings-item">
@@ -108,7 +112,7 @@ class Settings extends Component {
                   <p>申请和管理您的API密钥</p>
                 </div>
                 <div className="settings-item-right">
-                  <button className="btn-default" onClick={this.toEdit.bind(this)}>设置</button>
+                  <button className="btn-default" onClick={this.toEdit.bind(this, '/index/apitoken')}>设置</button>
                 </div>
               </div>
               <div className="settings-item">

@@ -5,12 +5,30 @@ import { Input, Button } from 'antd';
 class GoogleAuth extends Component {
   constructor (props) {
     super(props)
+    this.state = {
+      ciphertext: 'asdfghjklzxcvbnm',
+      pass: ''
+    }
+  }
+  password (e) {
+    this.setState({
+      pass: e.target.value
+    })
   }
   toBack () {
     let { history } = this.props;
     history.go(-1)
   }
+  // 点击确认
+  onSure () {
+    let { ciphertext, pass } = this.state;
+    console.log(ciphertext, pass)
+  }
+  componentDidMount () {
+
+  }
   render() {
+    let { ciphertext } = this.state;
     return (
       <div className="googleauth">
         <div className="googleauth-box">
@@ -54,7 +72,7 @@ class GoogleAuth extends Component {
                   <div className="item-cont-col">
                     <b><abbr title="必须的">*</abbr>密文</b>
                     <div className="ciphertext col-input">
-                      <Input disabled placeholder="jsdljskaljfjslkajf"/><Button><i className="fa fa-refresh"></i></Button>
+                      <Input disabled placeholder={ciphertext}/><Button><i className="fa fa-refresh"></i></Button>
                     </div>
                   </div>
                 </div>
@@ -67,14 +85,14 @@ class GoogleAuth extends Component {
                     <div className="item-cont-col">
                       <b>验证器上的密码</b>
                       <div className="col-input">
-                        <Input/>
+                        <Input onChange={this.password.bind(this)}/>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="googleauth-btn">
                   <Button type="primary" className="googleauth-btn-cancel" onClick={this.toBack.bind(this)}>取消</Button>
-                  <Button type="primary" className="googleauth-btn-sure">确认</Button>
+                  <Button type="primary" className="googleauth-btn-sure" onClick={this.onSure.bind(this)}>确认</Button>
                 </div>
               </div>
             </div>

@@ -9,7 +9,7 @@ class SmsAuth extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      nation: '',
+      nation: 'china',
       phone: '',
       verifycode: ''
     }

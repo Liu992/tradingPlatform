@@ -47,4 +47,50 @@
 }
 .editpass-right{
     width: 65%;
+    padding: 30px 70px;
+    label{
+        font-weight: 900;
+        color: #000;
+    }
+    p{
+        text-align: right;
+        margin-top: -8px;
+    }
+    .ant-form-item{
+        margin-bottom: 10px;
+    }
+    .editpass-btn{
+        border-top: 1px solid #ccc;
+        margin: 30px 0 50px 0;
+        padding-top: 20px;
+        text-align: right;
+        span{
+            display: block;
+            padding: 0px 4px;
+            width: 100%;
+            height: 100%;
+        }
+        button{
+            height: 40px;
+            line-height: 40px;
+        }
+        .editpass-btn-cancel{
+            font-size: 18px;
+            border-radius: 6px;
+            margin-right: 20px;
+            color: #333333;
+            background-color: white;
+            border-color: #f2f2f2;
+            &:hover{
+                background-color: #eee;
+            }
+        }
+        .editpass-btn-sure{
+            font-size: 18px;
+            border-radius: 6px;
+            color: white;
+            background-color: #428bca;
+            border-color: #cccccc;
+        }
+    }
 }
