@@ -1,13 +1,14 @@
 import Loadable from 'react-loadable';
-import React from 'react'
+import React from 'react';
+
 function MyLoadingComponent() {
   return <div>Loading...</div>;
 }
+
 let Property = Loadable({
   loader: () => import('../view/Property/Property'),
   loading: MyLoadingComponent
 });
-
 let Dcl = Loadable({
   loader: () => import('../view/DCL'),
   loading: MyLoadingComponent

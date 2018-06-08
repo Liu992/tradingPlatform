@@ -7,8 +7,7 @@ import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
 class Dcl extends Component {
   render() {
-    let { route } = this.props
-    console.log(route)
+    let { route } = this.props;
     return (
       <Router>
       <div className="wrap-box">
