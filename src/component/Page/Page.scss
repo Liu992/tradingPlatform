@@ -1,0 +1,42 @@
+.page{
+    width: 100%;
+    .pagination{
+        display: inline-block;
+        padding-left: 0;
+        margin: 20px 0;
+        border-radius: 4px;
+        &>li{
+            display: inline;
+            &>span{
+                position: relative;
+                float: left;
+                padding: 6px 12px;
+                line-height: 1.428571429;
+                text-decoration: none;
+                color: #364450;
+                background-color: white;
+                border: 1px solid #dddddd;
+                margin-left: -1px;
+                cursor: pointer;
+            }
+        }
+        &>li:first-child>span{
+            margin-left: 0;
+            border-bottom-left-radius: 4px;
+            border-top-left-radius: 4px;
+        }
+        &>.disabled>span{
+            color: #777777;
+            background-color: white;
+            border-color: #dddddd;
+            cursor: not-allowed;
+        }
+        &>.active>span{
+            z-index: 2;
+            color: white;
+            background-color: #364450;
+            border-color: #364450;
+            cursor: pointer;
+        }
+    }
+}

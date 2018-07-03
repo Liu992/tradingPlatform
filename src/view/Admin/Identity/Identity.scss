@@ -1,0 +1,64 @@
+.identity{
+    width: 100%;
+}
+.identity-tab{
+    width: 100%;
+    border:1px solid #364450;
+    border-radius: 4px;
+    background: #fff;
+    h1{
+        color: #fff;
+        background-color: #364450;
+        padding: 10px 15px;
+        border-bottom: 1px solid transparent;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        font-size: 14px;
+    }
+    .tablebox{
+        width: 100%;
+        padding: 6px;
+    }
+    table{
+        width: 100%;
+        color:#000;
+        thead{
+            th{
+                border-bottom: 2px solid #dddddd;
+                padding-bottom: 10px;
+            }
+        }
+        tbody{
+            tr:last-child td{
+                border: none;
+            }
+            td{
+                padding: 4px 0;
+                border-bottom: 1px solid #dddddd;
+            }
+            span{
+                background-color: #5cb85c;
+                display: inline;
+                padding: .2em .6em .3em;
+                font-size: 75%;
+                font-weight: bold;
+                line-height: 1;
+                color: white;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: baseline;
+                border-radius: .25em;
+            }
+        }
+    }
+    p{
+        background: whitesmoke;
+        padding: 10px 15px;
+        font-size: 14px;
+        border-top:1px solid #dddddd;
+        color: #333333;
+        margin: 0;
+        border-radius: 0 0 4px 4px;
+        margin-top: 20px;
+    }
+}
