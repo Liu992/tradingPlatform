@@ -84,6 +84,62 @@ let Api = Loadable({
   loader: () => import('../view/Api'),
   loading: MyLoadingComponent
 });
+let Orders = Loadable({
+  loader: () => import('../view/History/Orders'),
+  loading: MyLoadingComponent
+})
+let Account = Loadable({
+  loader: () => import('../view/History/Account'),
+  loading: MyLoadingComponent
+})
+let Trades = Loadable({
+  loader: () => import('../view/History/Trades'),
+  loading: MyLoadingComponent
+})
+let Admin = Loadable({
+  loader: () => import('../view/Admin'),
+  loading: MyLoadingComponent
+})
+let Control = Loadable({
+  loader: () => import('../view/Admin/Control'),
+  loading: MyLoadingComponent
+})
+let Dom = Loadable({
+  loader: () => import('../view/Admin/Dom'),
+  loading: MyLoadingComponent
+})
+let Identity = Loadable({
+  loader: () => import('../view/Admin/Identity'),
+  loading: MyLoadingComponent
+})
+let AProperty = Loadable({
+  loader: () => import('../view/Admin/Property'),
+  loading: MyLoadingComponent
+})
+let Recharge = Loadable({
+  loader: () => import('../view/Admin/Recharge'),
+  loading: MyLoadingComponent
+})
+let Servics = Loadable({
+  loader: () => import('../view/Admin/Service'),
+  loading: MyLoadingComponent
+})
+let Statistics = Loadable({
+  loader: () => import('../view/Admin/Statistics'),
+  loading: MyLoadingComponent
+})
+let User = Loadable({
+  loader: () => import('../view/Admin/User'),
+  loading: MyLoadingComponent
+})
+let Withdraw = Loadable({
+  loader: () => import('../view/Admin/Withdraw'),
+  loading: MyLoadingComponent
+})
+let NewDom = Loadable({
+  loader: () => import('../view/Admin/Dom/NewDom'),
+  loading: MyLoadingComponent
+})
 
 
 
@@ -115,7 +171,24 @@ let routerMap = [
       {
         path: '/index/history',
         exact: false,
-        component: Historys
+        component: Historys,
+        children: [
+          {
+            path: '/index/history/orders',
+            exact: false,
+            component: Orders
+          },
+          {
+            path: '/index/history/account',
+            exact: false,
+            component: Account
+          },
+          {
+            path: '/index/history/trades',
+            exact: false,
+            component: Trades
+          }
+        ]
       },
       {
         path: '/index/settings',
@@ -173,6 +246,63 @@ let routerMap = [
     path: '/markets',
     exact: true,
     component: Markets
+  },
+  {
+    path: '/admin',
+    exact: false,
+    component: Admin,
+    children: [
+      {
+        path: '/admin/control',
+        exact: false,
+        component: Control
+      },
+      {
+        path: '/admin/dom',
+        exact: false,
+        component: Dom
+      },
+      {
+        path: '/admin/identity',
+        exact: false,
+        component: Identity
+      },
+      {
+        path: '/admin/property',
+        exact: false,
+        component: AProperty
+      },
+      {
+        path: '/admin/recharge',
+        exact: false,
+        component: Recharge
+      },
+      {
+        path: '/admin/withdraw',
+        exact: false,
+        component: Withdraw
+      },
+      {
+        path: '/admin/user',
+        exact: false,
+        component: User
+      },
+      {
+        path: '/admin/servics',
+        exact: false,
+        component: Servics
+      },
+      {
+        path: '/admin/statistics',
+        exact: false,
+        component: Statistics
+      },
+      {
+        path: '/admin/newdom',
+        exact: false,
+        component: NewDom
+      }
+    ]
   },
   {
     path: '/api',

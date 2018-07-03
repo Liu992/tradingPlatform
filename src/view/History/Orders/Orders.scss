@@ -1,0 +1,30 @@
+.orders{
+    width: 100%;
+    border: 1px solid #dddddd;
+    background: #fff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    min-height: 150px;
+    table{
+        width: 100%;
+        font-size: 14px;
+        color: #000;
+        thead{
+            border-bottom: 2px solid #dddddd;
+            th{
+                padding: 5px;
+            }
+        }
+        tbody{
+            tr{
+                border-bottom: 1px solid #dddddd;
+            }
+            td{
+                height: 40px;
+            }
+        }
+    }
+}

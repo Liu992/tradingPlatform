@@ -1,0 +1,106 @@
+.admin{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: whitesmoke;
+}
+.admin-header{
+    width: 100%;
+    height: 50px;
+    background-color: #222222;
+}
+.admin-nav{
+    max-width: 950px;
+    height: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul{
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex: 1;
+        li{
+            height: 100%;
+            text-align: center;
+            line-height: 50px;
+            flex: 1;
+            position: relative;
+            color: #777777;
+            a{
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                line-height: 50px;
+                color: #777777;
+            }
+            &:hover{
+                &>a{
+                    color: #fff;
+                }
+                i{
+                    border-top-color: #fff;
+                }
+                color: #fff;
+            }
+            i{
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border: 4px solid transparent;
+                border-top-color: #dddddd;
+                margin-left: 4px;
+            }
+            span{
+                position: absolute;
+                top: 50px;
+                left: 0;
+                border: 1px solid rgba(0,0,0,0.15);
+                border-radius: 4px;
+                background-clip: padding-box;
+                box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+                min-width: 100px;
+                a{
+                    color: #000;
+                }
+                display: none;
+            }
+        }
+        .active{
+            background: #000 !important;
+            color: #fff !important;
+            &>a{
+                color: #fff !important;
+            }
+            i{
+                border-top-color: #fff !important;
+            }
+            span{
+                display: block;
+            }
+        }
+    }
+    ol{
+        width: 100px;
+    }
+}
+.admin-content{
+    width: 100%;
+    flex: 1;
+    overflow-y:scroll; 
+    // min-height: 800px;
+}
+.admin-content>div{
+    margin-top: 20px;
+    border-width: 0 0 1px;
+    max-width: 950px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 5px;
+}

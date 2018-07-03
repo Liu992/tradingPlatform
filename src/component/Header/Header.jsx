@@ -25,7 +25,7 @@ let navlist = [
   },
   {
     id: 4,
-    path: '/index/history',
+    path: '/index/history/orders',
     iconfont: 'fa fa-book',
     text: '历史记录',
     authority: true
@@ -34,12 +34,12 @@ let navlist = [
 let loginAccount = [
   {
     id: 5,
-    path: '/index/signin',
+    path: '/signin',
     title: '登录'
   },
   {
     id: 6,
-    path: '/index/signup',
+    path: '/signup',
     title: '创建账户'
   }
 ]
@@ -61,7 +61,7 @@ class Header extends Component {
     })
   }
   openSelect (id, e) {
-    if (id ==1) {
+    if (id === 1) {
       b=0
       a++;
     } else {
@@ -108,7 +108,7 @@ class Header extends Component {
               {
                 navlist.map((item, index) => {
                   return (
-                    <li key={item.id} className={ind === item.id?'open':''} style={{background: ind===item.id?'#3498db':'', display: item.authority&&unlogin?'none':'block'}} onClick={this.addOpen.bind(this, item.id)}>
+                    <li key={item.id} className={ind === item.id?'open':''} style={{background: ind===item.id?'#3498db':'', display: item.authority && unlogin ? 'none': 'block'}} onClick={this.addOpen.bind(this, item.id)}>
                       <NavLink to={item.path} target={item.target}>
                         <i className={item.iconfont}></i>
                         <span>{item.text}</span>
@@ -122,14 +122,14 @@ class Header extends Component {
           {
             loginAccount.map((item, index) => {
               return (
-                <li key={item.id} className={`login ${ind === item.id?'open':''}`} style={{background: ind===item.id?'#3498db':'', display: !unlogin?'none':'block'}} onClick={this.addOpen.bind(this, item.id)}>
+                <li key={item.id} className={`login ${ind === item.id?'open':''}`} style={{background: ind === item.id ? '#3498db' : '', display: !unlogin ? 'none' : 'block'}} onClick={this.addOpen.bind(this, item.id)}>
                   <NavLink to={item.path} ><span>{item.title}</span></NavLink>
                 </li>
               )
             })
           }
-          <li className={`dropdown account-settings ${on&&ind1 == 1?'openselect':''}`} onClick={this.openSelect.bind(this, 1)}  style={{background: on&&ind1===1?'#196090':'', display: unlogin?'none':'block'}}>
-            <a className="dropdown-toggle" href="javascript:;">1234567890@163.com<b  className="dropdown-toggle"></b><em className="dropdown-toggle"></em></a>
+          <li className={`dropdown account-settings ${on && ind1 === 1 ? 'openselect' : ''}`} onClick={this.openSelect.bind(this, 1)}  style={{display: unlogin ? 'none' : 'block'}}>
+            <span className="dropdown-toggle">1234567890@163.com<b  className="dropdown-toggle"></b><em className="dropdown-toggle"></em></span>
             <ul className="dropdown-menu">
               <li>
                 <NavLink to="/index/settings">
@@ -144,6 +144,12 @@ class Header extends Component {
                 </NavLink>
               </li>
               <li>
+                <NavLink to="/admin/control" target="_blank">
+                  <i className="fa fa-dashboard"></i>
+                  <span>后台管理</span>
+                </NavLink>
+              </li>
+              <li>
                 <NavLink to="/index/signin">
                   <i className="fa fa-sign-out"></i>
                   <span>安全退出</span>
@@ -151,28 +157,28 @@ class Header extends Component {
               </li>
             </ul>
           </li>
-          <li className={`dropdown ${on&&ind1 == 2?'openselect':''}`} onClick={this.openSelect.bind(this, 2)} style={{background: on&&ind1===2?'#196090':''}}>
-            <a  className="dropdown-toggle" href="javascript:;">
+          <li className={`dropdown ${on && ind1 === 2 ? 'openselect' : ''}`} onClick={this.openSelect.bind(this, 2)} style={{background: on && ind1 === 2 ? '#196090' : ''}}>
+            <span className="dropdown-toggle">
               <em className="dropdown-toggle"></em>
               <img className="dropdown-toggle" src={require('../../assets/image/languages/en.png')} alt=""/>
               <b className="dropdown-toggle"></b>
               <i className="dropdown-toggle"></i>
-            </a>
+            </span>
             <ul className="dropdown-menu" id="languages">
               <li>
-                <a href="javascript:;">
+                <span>
                   <img src={require('../../assets/image/languages/en.png')} alt=""/>
-                </a>
+                </span>
               </li>
               <li>
-                <a href="javascript:;">
+                <span>
                   <img src={require('../../assets/image/languages/ko.png')} alt=""/>
-                </a>
+                </span>
               </li>
               <li>
-                <a href="javascript:;">
+                <span>
                   <img src={require('../../assets/image/languages/zh-CN.png')} alt=""/>
-                </a>
+                </span>
               </li>
             </ul>
           </li>
